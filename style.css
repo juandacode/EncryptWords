@@ -15,10 +15,8 @@ main {
     align-items: center;
 }
 .container {
-    border: 1px solid rgb(11, 132, 156);
     width: 90%;
     margin-top: 2rem;
-    
 }
 .title {
     margin-top: 10rem;
@@ -66,9 +64,21 @@ main {
     color: #ffffff;
     border: none;
 }
+.encrypt:hover {
+    background-color: #ffffff;
+    color: #0A3871;
+    border: 0.1rem solid #0A3871;
+    cursor: pointer;
+}
 .desencrypt {
     color: #0A3871;
     border: 0.1rem solid #0A3871;
+}
+.desencrypt:hover {
+    color: #ffffff;
+    background-color: #0A3871;
+    border: 0.1rem solid #0A3871;
+    cursor: pointer;
 }
 
 .message {
@@ -82,9 +92,6 @@ main {
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
-.message {
-    border: 2px solid green;
-}
 .message-title {
     font-size: 2.2rem;
     font-weight: 600;
@@ -96,4 +103,52 @@ main {
     font-weight: 400;
     line-height: 2.4rem;
     text-align: center;
+}
+.col-two {
+    display: none;
+}
+
+@media(min-width:500px) {
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .buttons > button {
+        margin: 1rem;
+    }
+    .title {
+        margin-bottom: 25rem;
+    }
+   
+}
+@media(min-width:968px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 30%;
+    }
+    .title {
+        margin-bottom: 35rem;
+    }
+    .col-two {
+        display: block;
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        height: 90vh;
+    }
+    .toy {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .message {
+        display: none;
+    }
+    .buttons {
+        margin: 0 10rem;
+    }
+    .warning {
+        margin-left: 12rem;
+    }
 }
